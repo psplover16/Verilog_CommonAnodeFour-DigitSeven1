@@ -1,0 +1,76 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2010 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+# Date created = 10:57:43  January 30, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		tt_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY MAX3000A
+set_global_assignment -name DEVICE "EPM3064ALC44-10"
+set_global_assignment -name TOP_LEVEL_ENTITY tt
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:57:43  JANUARY 30, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP1"
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name DEVICE_FILTER_PACKAGE PLCC
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name VERILOG_FILE tt.v
+set_global_assignment -name MISC_FILE "D:/08_NO2/tt.dpf"
+set_global_assignment -name MAX7000_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_43 -to clk
+set_location_assignment PIN_4 -to seg[7]
+set_location_assignment PIN_29 -to seg[6]
+set_location_assignment PIN_25 -to seg[5]
+set_location_assignment PIN_24 -to seg[1]
+set_location_assignment PIN_26 -to seg[0]
+set_location_assignment PIN_27 -to seg[4]
+set_location_assignment PIN_28 -to seg[3]
+set_location_assignment PIN_31 -to seg[2]
+set_location_assignment PIN_9 -to way[3]
+set_location_assignment PIN_8 -to way[2]
+set_location_assignment PIN_6 -to way[1]
+set_location_assignment PIN_5 -to way[0]
+set_global_assignment -name MISC_FILE "C:/Users/Gary/Desktop/Vue/Verilog_LevelB_technician_DigitalElectronics_No.2/tt.dpf"
+set_location_assignment PIN_41 -to showDigit[3]
+set_global_assignment -name MISC_FILE "C:/Users/Gary/Desktop/Vue/Verilog_CPLD/tt.dpf"
+set_location_assignment PIN_40 -to showDigit[2]
+set_location_assignment PIN_39 -to showDigit[1]
+set_location_assignment PIN_37 -to showDigit[0]
+set_location_assignment PIN_11 -to showNum[5]
+set_location_assignment PIN_12 -to showNum[4]
+set_location_assignment PIN_14 -to showNum[3]
+set_location_assignment PIN_16 -to showNum[2]
+set_location_assignment PIN_18 -to showNum[1]
+set_location_assignment PIN_19 -to showNum[0]
