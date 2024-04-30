@@ -74,3 +74,5 @@ set_location_assignment PIN_14 -to showNum[3]
 set_location_assignment PIN_16 -to showNum[2]
 set_location_assignment PIN_18 -to showNum[1]
 set_location_assignment PIN_19 -to showNum[0]
+set_global_assignment -name MISC_FILE "C:/Users/Gary/Desktop/Vue/Verilog_CommonAnodeFour-DigitSeven1/tt.dpf"
+set_global_assignment -name VECTOR_WAVEFORM_FILE tt.vwf

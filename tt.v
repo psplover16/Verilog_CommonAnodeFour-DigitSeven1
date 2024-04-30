@@ -6,7 +6,7 @@ output reg[3:0] way;
 input [3:0] showDigit; //
 input [5:0] showNum;
 // 
-reg[11:0] frequency;
+reg[13:0] frequency;
 // reg [5:0] tmpshowNum;
 // 
 // assign way = showDigit; // 秀第幾位數
@@ -16,14 +16,14 @@ always@(posedge clk)frequency=frequency+1;
 
 
 
-always @(posedge frequency[11])  begin
+always @(posedge clk)  begin
 
 // 秀第幾位
     case(showDigit)
-      0: way <= 4'b0001;
-      1: way <= 4'b0010;
-      2: way <= 4'b0100;
-      3: way <= 4'b1000;
+      1: way = 4'b0001;
+      2: way = 4'b0010;
+      3: way = 4'b0100;
+      4: way = 4'b1000;
     //   0: way = 15'b000000000000001;
     //   1: way = 15'b000000000000010;
     //   2: way = 15'b000000000000100;
