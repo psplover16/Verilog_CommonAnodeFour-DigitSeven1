@@ -15,8 +15,7 @@ always@(posedge clk)frequency=frequency+1;
 // 
 
 
-
-always @(posedge clk)  begin
+always @(posedge showDigit or posedge showNum or posedge showNum[5])  begin
 
 // 秀第幾位
     case(showDigit)

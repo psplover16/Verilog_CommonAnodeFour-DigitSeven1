@@ -1,5 +1,5 @@
 Fitter report for tt
-Tue Apr 30 13:18:05 2024
+Tue Apr 30 13:59:27 2024
 Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
 
 
@@ -19,14 +19,12 @@ Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
  11. Dedicated Inputs I/O
  12. Output Pin Default Load For Reported TCO
  13. Fitter Resource Utilization by Entity
- 14. Control Signals
- 15. Global & Other Fast Signals
- 16. Non-Global High Fan-Out Signals
- 17. Interconnect Usage Summary
- 18. LAB Macrocells
- 19. Logic Cell Interconnection
- 20. Fitter Device Options
- 21. Fitter Messages
+ 14. Non-Global High Fan-Out Signals
+ 15. Interconnect Usage Summary
+ 16. LAB Macrocells
+ 17. Logic Cell Interconnection
+ 18. Fitter Device Options
+ 19. Fitter Messages
 
 
 
@@ -52,7 +50,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------+
 ; Fitter Summary                                                       ;
 +-----------------------+----------------------------------------------+
-; Fitter Status         ; Successful - Tue Apr 30 13:18:05 2024        ;
+; Fitter Status         ; Successful - Tue Apr 30 13:59:27 2024        ;
 ; Quartus II Version    ; 9.1 Build 304 01/25/2010 SP 1 SJ Web Edition ;
 ; Revision Name         ; tt                                           ;
 ; Top-level Entity Name ; tt                                           ;
@@ -109,22 +107,22 @@ The pin-out file can be found in C:/Users/Gary/Desktop/Vue/Verilog_CommonAnodeFo
 ; Resource                          ; Usage            ;
 +-----------------------------------+------------------+
 ; Logic cells                       ; 12 / 64 ( 19 % ) ;
-; Registers                         ; 12 / 64 ( 19 % ) ;
+; Registers                         ; 0 / 64 ( 0 % )   ;
 ; Number of pterms used             ; 27               ;
 ; User inserted logic elements      ; 0                ;
 ; I/O pins                          ; 27 / 34 ( 79 % ) ;
 ;     -- Clock pins                 ; 1 / 2 ( 50 % )   ;
 ;     -- Dedicated input pins       ; 0 / 2 ( 0 % )    ;
-; Global signals                    ; 1                ;
+; Global signals                    ; 0                ;
 ; Shareable expanders               ; 0 / 64 ( 0 % )   ;
 ; Parallel expanders                ; 0 / 60 ( 0 % )   ;
 ; Cells using turbo bit             ; 12 / 64 ( 19 % ) ;
-; Maximum fan-out node              ; clk              ;
-; Maximum fan-out                   ; 12               ;
+; Maximum fan-out node              ; showNum[2]       ;
+; Maximum fan-out                   ; 8                ;
 ; Highest non-global fan-out signal ; showNum[2]       ;
 ; Highest non-global fan-out        ; 8                ;
-; Total fan-out                     ; 84               ;
-; Average fan-out                   ; 2.15             ;
+; Total fan-out                     ; 72               ;
+; Average fan-out                   ; 1.85             ;
 +-----------------------------------+------------------+
 
 
@@ -133,7 +131,7 @@ The pin-out file can be found in C:/Users/Gary/Desktop/Vue/Verilog_CommonAnodeFo
 +--------------+-------+----------+-----+-----------------------+--------------------+--------+--------------+----------------------+
 ; Name         ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; I/O Standard ; Location assigned by ;
 +--------------+-------+----------+-----+-----------------------+--------------------+--------+--------------+----------------------+
-; clk          ; 43    ; --       ; --  ; 12                    ; 0                  ; yes    ; 3.3-V LVTTL  ; User                 ;
+; clk          ; 43    ; --       ; --  ; 0                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
 ; showDigit[0] ; 37    ; --       ; 4   ; 4                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
 ; showDigit[1] ; 39    ; --       ; 4   ; 4                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
 ; showDigit[2] ; 40    ; --       ; 4   ; 4                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
@@ -260,24 +258,6 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+------------+------+---------------------+--------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Control Signals                                                                      ;
-+------+----------+---------+-------+--------+----------------------+------------------+
-; Name ; Location ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ;
-+------+----------+---------+-------+--------+----------------------+------------------+
-; clk  ; PIN_43   ; 12      ; Clock ; yes    ; On                   ; --               ;
-+------+----------+---------+-------+--------+----------------------+------------------+
-
-
-+---------------------------------------------------------------------+
-; Global & Other Fast Signals                                         ;
-+------+----------+---------+----------------------+------------------+
-; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ;
-+------+----------+---------+----------------------+------------------+
-; clk  ; PIN_43   ; 12      ; On                   ; --               ;
-+------+----------+---------+----------------------+------------------+
-
-
 +---------------------------------+
 ; Non-Global High Fan-Out Signals ;
 +--------------+------------------+
@@ -293,18 +273,18 @@ Note: User assignments will override these defaults. The user specified values a
 ; showDigit[2] ; 4                ;
 ; showDigit[1] ; 4                ;
 ; showDigit[0] ; 4                ;
-; seg[3]~reg0  ; 1                ;
-; seg[4]~reg0  ; 1                ;
-; seg[5]~reg0  ; 1                ;
-; seg[0]~reg0  ; 1                ;
-; seg[1]~reg0  ; 1                ;
-; seg[2]~reg0  ; 1                ;
-; seg[6]~reg0  ; 1                ;
-; seg[7]~reg0  ; 1                ;
-; way[0]~reg0  ; 1                ;
-; way[1]~reg0  ; 1                ;
-; way[2]~reg0  ; 1                ;
-; way[3]~reg0  ; 1                ;
+; WideOr3~8    ; 1                ;
+; WideOr4~7    ; 1                ;
+; seg~17       ; 1                ;
+; seg~14       ; 1                ;
+; WideOr1~4    ; 1                ;
+; WideOr2~8    ; 1                ;
+; WideOr6~6    ; 1                ;
+; seg~10       ; 1                ;
+; WideOr0~3    ; 1                ;
+; Decoder0~12  ; 1                ;
+; Decoder0~10  ; 1                ;
+; Decoder0~8   ; 1                ;
 +--------------+------------------+
 
 
@@ -334,24 +314,24 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------------------+-----------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------+
-; Logic Cell Interconnection                                                                              ;
-+-----+------------+-----------------------------------------------------------------------------+--------+
-; LAB ; Logic Cell ; Input                                                                       ; Output ;
-+-----+------------+-----------------------------------------------------------------------------+--------+
-;  A  ; LC4        ; clk, showDigit[0], showDigit[1], showDigit[2], showDigit[3]                 ; way[3] ;
-;  A  ; LC5        ; clk, showDigit[0], showDigit[1], showDigit[2], showDigit[3]                 ; way[2] ;
-;  A  ; LC11       ; clk, showDigit[0], showDigit[1], showDigit[2], showDigit[3]                 ; way[1] ;
-;  A  ; LC14       ; clk, showDigit[1], showDigit[2], showDigit[3], showDigit[0]                 ; way[0] ;
-;  A  ; LC16       ; clk, showNum[1], showNum[2], showNum[0], showNum[3], showNum[4], showNum[5] ; seg[7] ;
-;  C  ; LC41       ; clk, showNum[2], showNum[1], showNum[3], showNum[4], showNum[5], showNum[0] ; seg[6] ;
-;  C  ; LC46       ; clk, showNum[2], showNum[3], showNum[4], showNum[5]                         ; seg[2] ;
-;  C  ; LC33       ; clk, showNum[0], showNum[2], showNum[3], showNum[4], showNum[5], showNum[1] ; seg[1] ;
-;  C  ; LC36       ; clk, showNum[1], showNum[3], showNum[2], showNum[4], showNum[5]             ; seg[0] ;
-;  C  ; LC35       ; clk, showNum[0], showNum[2], showNum[3], showNum[4], showNum[5]             ; seg[5] ;
-;  C  ; LC37       ; clk, showNum[3], showNum[0], showNum[1], showNum[4], showNum[5], showNum[2] ; seg[4] ;
-;  C  ; LC40       ; clk, showNum[2], showNum[0], showNum[1], showNum[4], showNum[5], showNum[3] ; seg[3] ;
-+-----+------------+-----------------------------------------------------------------------------+--------+
++----------------------------------------------------------------------------------------------------+
+; Logic Cell Interconnection                                                                         ;
++-----+------------+------------------------------------------------------------------------+--------+
+; LAB ; Logic Cell ; Input                                                                  ; Output ;
++-----+------------+------------------------------------------------------------------------+--------+
+;  A  ; LC4        ; showDigit[0], showDigit[1], showDigit[2], showDigit[3]                 ; way[3] ;
+;  A  ; LC11       ; showDigit[0], showDigit[1], showDigit[2], showDigit[3]                 ; way[1] ;
+;  A  ; LC5        ; showDigit[0], showDigit[1], showDigit[2], showDigit[3]                 ; way[2] ;
+;  A  ; LC14       ; showDigit[1], showDigit[2], showDigit[3], showDigit[0]                 ; way[0] ;
+;  A  ; LC16       ; showNum[1], showNum[2], showNum[0], showNum[3], showNum[4], showNum[5] ; seg[7] ;
+;  C  ; LC36       ; showNum[1], showNum[3], showNum[2], showNum[4], showNum[5]             ; seg[0] ;
+;  C  ; LC33       ; showNum[0], showNum[2], showNum[3], showNum[4], showNum[5], showNum[1] ; seg[1] ;
+;  C  ; LC41       ; showNum[2], showNum[1], showNum[3], showNum[4], showNum[5], showNum[0] ; seg[6] ;
+;  C  ; LC46       ; showNum[2], showNum[3], showNum[4], showNum[5]                         ; seg[2] ;
+;  C  ; LC35       ; showNum[0], showNum[2], showNum[3], showNum[4], showNum[5]             ; seg[5] ;
+;  C  ; LC40       ; showNum[2], showNum[0], showNum[1], showNum[4], showNum[5], showNum[3] ; seg[3] ;
+;  C  ; LC37       ; showNum[3], showNum[0], showNum[1], showNum[4], showNum[5], showNum[2] ; seg[4] ;
++-----+------------+------------------------------------------------------------------------+--------+
 
 
 +---------------------------------------------------------------+
@@ -375,12 +355,12 @@ Note: User assignments will override these defaults. The user specified values a
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Apr 30 13:18:05 2024
+    Info: Processing started: Tue Apr 30 13:59:27 2024
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off tt -c tt
 Info: Selected device EPM3064ALC44-10 for design "tt"
 Info: Quartus II Fitter was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 225 megabytes
-    Info: Processing ended: Tue Apr 30 13:18:05 2024
+    Info: Processing ended: Tue Apr 30 13:59:27 2024
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
