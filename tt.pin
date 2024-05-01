@@ -67,44 +67,44 @@ Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage 
 GND+                         : 1         :        :                   :         :           :                
 GND+                         : 2         :        :                   :         :           :                
 VCCINT                       : 3         : power  :                   : 3.3V    :           :                
-seg[7]                       : 4         : output : 3.3-V LVTTL       :         :           : Y              
-way[0]                       : 5         : output : 3.3-V LVTTL       :         :           : Y              
-way[1]                       : 6         : output : 3.3-V LVTTL       :         :           : Y              
+seg[6]                       : 4         : output : 3.3-V LVTTL       :         :           : Y              
+seg[5]                       : 5         : output : 3.3-V LVTTL       :         :           : Y              
+seg[4]                       : 6         : output : 3.3-V LVTTL       :         :           : Y              
 TDI                          : 7         : input  : 3.3-V LVTTL       :         :           : N              
-way[2]                       : 8         : output : 3.3-V LVTTL       :         :           : Y              
-way[3]                       : 9         : output : 3.3-V LVTTL       :         :           : Y              
+seg[3]                       : 8         : output : 3.3-V LVTTL       :         :           : Y              
+seg[2]                       : 9         : output : 3.3-V LVTTL       :         :           : Y              
 GND                          : 10        : gnd    :                   :         :           :                
-showNum[5]                   : 11        : input  : 3.3-V LVTTL       :         :           : Y              
-showNum[4]                   : 12        : input  : 3.3-V LVTTL       :         :           : Y              
+seg[1]                       : 11        : output : 3.3-V LVTTL       :         :           : Y              
+seg[0]                       : 12        : output : 3.3-V LVTTL       :         :           : Y              
 TMS                          : 13        : input  : 3.3-V LVTTL       :         :           : N              
-showNum[3]                   : 14        : input  : 3.3-V LVTTL       :         :           : Y              
+seg[7]                       : 14        : output : 3.3-V LVTTL       :         :           : Y              
 VCCIO                        : 15        : power  :                   : 3.3V    :           :                
-showNum[2]                   : 16        : input  : 3.3-V LVTTL       :         :           : Y              
+showDigit[0]                 : 16        : input  : 3.3-V LVTTL       :         :           : Y              
 GND                          : 17        : gnd    :                   :         :           :                
-showNum[1]                   : 18        : input  : 3.3-V LVTTL       :         :           : Y              
-showNum[0]                   : 19        : input  : 3.3-V LVTTL       :         :           : Y              
-RESERVED                     : 20        :        :                   :         :           :                
-RESERVED                     : 21        :        :                   :         :           :                
+showDigit[1]                 : 18        : input  : 3.3-V LVTTL       :         :           : Y              
+showDigit[2]                 : 19        : input  : 3.3-V LVTTL       :         :           : Y              
+showDigit[3]                 : 20        : input  : 3.3-V LVTTL       :         :           : Y              
+showNum[5]                   : 21        : input  : 3.3-V LVTTL       :         :           : Y              
 GND                          : 22        : gnd    :                   :         :           :                
 VCCINT                       : 23        : power  :                   : 3.3V    :           :                
-seg[1]                       : 24        : output : 3.3-V LVTTL       :         :           : Y              
-seg[5]                       : 25        : output : 3.3-V LVTTL       :         :           : Y              
-seg[0]                       : 26        : output : 3.3-V LVTTL       :         :           : Y              
-seg[4]                       : 27        : output : 3.3-V LVTTL       :         :           : Y              
-seg[3]                       : 28        : output : 3.3-V LVTTL       :         :           : Y              
-seg[6]                       : 29        : output : 3.3-V LVTTL       :         :           : Y              
+way[7]                       : 24        : output : 3.3-V LVTTL       :         :           : Y              
+way[6]                       : 25        : output : 3.3-V LVTTL       :         :           : Y              
+way[5]                       : 26        : output : 3.3-V LVTTL       :         :           : Y              
+way[4]                       : 27        : output : 3.3-V LVTTL       :         :           : Y              
+way[3]                       : 28        : output : 3.3-V LVTTL       :         :           : Y              
+way[2]                       : 29        : output : 3.3-V LVTTL       :         :           : Y              
 GND                          : 30        : gnd    :                   :         :           :                
-seg[2]                       : 31        : output : 3.3-V LVTTL       :         :           : Y              
+way[1]                       : 31        : output : 3.3-V LVTTL       :         :           : Y              
 TCK                          : 32        : input  : 3.3-V LVTTL       :         :           : N              
-RESERVED                     : 33        :        :                   :         :           :                
-RESERVED                     : 34        :        :                   :         :           :                
+way[0]                       : 33        : output : 3.3-V LVTTL       :         :           : Y              
+showNum[4]                   : 34        : input  : 3.3-V LVTTL       :         :           : Y              
 VCCIO                        : 35        : power  :                   : 3.3V    :           :                
 GND                          : 36        : gnd    :                   :         :           :                
-showDigit[0]                 : 37        : input  : 3.3-V LVTTL       :         :           : Y              
+showNum[3]                   : 37        : input  : 3.3-V LVTTL       :         :           : Y              
 TDO                          : 38        : output : 3.3-V LVTTL       :         :           : N              
-showDigit[1]                 : 39        : input  : 3.3-V LVTTL       :         :           : Y              
-showDigit[2]                 : 40        : input  : 3.3-V LVTTL       :         :           : Y              
-showDigit[3]                 : 41        : input  : 3.3-V LVTTL       :         :           : Y              
+showNum[2]                   : 39        : input  : 3.3-V LVTTL       :         :           : Y              
+showNum[1]                   : 40        : input  : 3.3-V LVTTL       :         :           : Y              
+showNum[0]                   : 41        : input  : 3.3-V LVTTL       :         :           : Y              
 GND                          : 42        : gnd    :                   :         :           :                
 clk                          : 43        : input  : 3.3-V LVTTL       :         :           : Y              
 GND+                         : 44        :        :                   :         :           :                

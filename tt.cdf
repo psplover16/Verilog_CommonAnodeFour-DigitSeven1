@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EPM3064AL44) Path("C:/Users/Gary/Desktop/Vue/Verilog_CommonAnodeFour-DigitSeven1/") File("tt.pof") MfrSpec(OpMask(1));
+		Device PartName(EPM3064AL44) Path("C:/Vue/Verilog_CommonAnodeFour-DigitSeven1/") File("tt.pof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

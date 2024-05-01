@@ -1,5 +1,5 @@
 Fitter report for tt
-Tue Apr 30 13:59:27 2024
+Wed May 01 19:09:56 2024
 Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
 
 
@@ -50,15 +50,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------+
 ; Fitter Summary                                                       ;
 +-----------------------+----------------------------------------------+
-; Fitter Status         ; Successful - Tue Apr 30 13:59:27 2024        ;
+; Fitter Status         ; Successful - Wed May 01 19:09:56 2024        ;
 ; Quartus II Version    ; 9.1 Build 304 01/25/2010 SP 1 SJ Web Edition ;
 ; Revision Name         ; tt                                           ;
 ; Top-level Entity Name ; tt                                           ;
 ; Family                ; MAX3000A                                     ;
 ; Device                ; EPM3064ALC44-10                              ;
 ; Timing Models         ; Final                                        ;
-; Total macrocells      ; 12 / 64 ( 19 % )                             ;
-; Total pins            ; 27 / 34 ( 79 % )                             ;
+; Total macrocells      ; 16 / 64 ( 25 % )                             ;
+; Total pins            ; 31 / 34 ( 91 % )                             ;
 +-----------------------+----------------------------------------------+
 
 
@@ -90,7 +90,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -98,7 +98,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/Gary/Desktop/Vue/Verilog_CommonAnodeFour-DigitSeven1/tt.pin.
+The pin-out file can be found in C:/Vue/Verilog_CommonAnodeFour-DigitSeven1/tt.pin.
 
 
 +------------------------------------------------------+
@@ -106,23 +106,23 @@ The pin-out file can be found in C:/Users/Gary/Desktop/Vue/Verilog_CommonAnodeFo
 +-----------------------------------+------------------+
 ; Resource                          ; Usage            ;
 +-----------------------------------+------------------+
-; Logic cells                       ; 12 / 64 ( 19 % ) ;
+; Logic cells                       ; 16 / 64 ( 25 % ) ;
 ; Registers                         ; 0 / 64 ( 0 % )   ;
-; Number of pterms used             ; 27               ;
+; Number of pterms used             ; 48               ;
 ; User inserted logic elements      ; 0                ;
-; I/O pins                          ; 27 / 34 ( 79 % ) ;
+; I/O pins                          ; 31 / 34 ( 91 % ) ;
 ;     -- Clock pins                 ; 1 / 2 ( 50 % )   ;
 ;     -- Dedicated input pins       ; 0 / 2 ( 0 % )    ;
 ; Global signals                    ; 0                ;
 ; Shareable expanders               ; 0 / 64 ( 0 % )   ;
 ; Parallel expanders                ; 0 / 60 ( 0 % )   ;
-; Cells using turbo bit             ; 12 / 64 ( 19 % ) ;
-; Maximum fan-out node              ; showNum[2]       ;
+; Cells using turbo bit             ; 16 / 64 ( 25 % ) ;
+; Maximum fan-out node              ; showDigit[0]     ;
 ; Maximum fan-out                   ; 8                ;
-; Highest non-global fan-out signal ; showNum[2]       ;
+; Highest non-global fan-out signal ; showDigit[0]     ;
 ; Highest non-global fan-out        ; 8                ;
-; Total fan-out                     ; 72               ;
-; Average fan-out                   ; 1.85             ;
+; Total fan-out                     ; 96               ;
+; Average fan-out                   ; 2.04             ;
 +-----------------------------------+------------------+
 
 
@@ -132,16 +132,16 @@ The pin-out file can be found in C:/Users/Gary/Desktop/Vue/Verilog_CommonAnodeFo
 ; Name         ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; I/O Standard ; Location assigned by ;
 +--------------+-------+----------+-----+-----------------------+--------------------+--------+--------------+----------------------+
 ; clk          ; 43    ; --       ; --  ; 0                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
-; showDigit[0] ; 37    ; --       ; 4   ; 4                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
-; showDigit[1] ; 39    ; --       ; 4   ; 4                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
-; showDigit[2] ; 40    ; --       ; 4   ; 4                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
-; showDigit[3] ; 41    ; --       ; 4   ; 4                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
-; showNum[0]   ; 19    ; --       ; 2   ; 6                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
-; showNum[1]   ; 18    ; --       ; 2   ; 6                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
-; showNum[2]   ; 16    ; --       ; 2   ; 8                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
-; showNum[3]   ; 14    ; --       ; 2   ; 8                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
-; showNum[4]   ; 12    ; --       ; 1   ; 8                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
-; showNum[5]   ; 11    ; --       ; 1   ; 8                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
+; showDigit[0] ; 16    ; --       ; 2   ; 8                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
+; showDigit[1] ; 18    ; --       ; 2   ; 8                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
+; showDigit[2] ; 19    ; --       ; 2   ; 8                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
+; showDigit[3] ; 20    ; --       ; 2   ; 8                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
+; showNum[0]   ; 41    ; --       ; 4   ; 8                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
+; showNum[1]   ; 40    ; --       ; 4   ; 8                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
+; showNum[2]   ; 39    ; --       ; 4   ; 8                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
+; showNum[3]   ; 37    ; --       ; 4   ; 8                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
+; showNum[4]   ; 34    ; --       ; 4   ; 8                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
+; showNum[5]   ; 21    ; --       ; 2   ; 8                     ; 0                  ; no     ; 3.3-V LVTTL  ; User                 ;
 +--------------+-------+----------+-----+-----------------------+--------------------+--------+--------------+----------------------+
 
 
@@ -150,18 +150,22 @@ The pin-out file can be found in C:/Users/Gary/Desktop/Vue/Verilog_CommonAnodeFo
 +--------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
 ; Name   ; Pin # ; I/O Bank ; LAB ; Output Register ; Slow Slew Rate ; Open Drain ; TRI Primitive ; I/O Standard ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
 +--------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
-; seg[0] ; 26    ; --       ; 3   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
-; seg[1] ; 24    ; --       ; 3   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
-; seg[2] ; 31    ; --       ; 3   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
-; seg[3] ; 28    ; --       ; 3   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
-; seg[4] ; 27    ; --       ; 3   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
-; seg[5] ; 25    ; --       ; 3   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
-; seg[6] ; 29    ; --       ; 3   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
-; seg[7] ; 4     ; --       ; 1   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
-; way[0] ; 5     ; --       ; 1   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
-; way[1] ; 6     ; --       ; 1   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
-; way[2] ; 8     ; --       ; 1   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
-; way[3] ; 9     ; --       ; 1   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; seg[0] ; 12    ; --       ; 1   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; seg[1] ; 11    ; --       ; 1   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; seg[2] ; 9     ; --       ; 1   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; seg[3] ; 8     ; --       ; 1   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; seg[4] ; 6     ; --       ; 1   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; seg[5] ; 5     ; --       ; 1   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; seg[6] ; 4     ; --       ; 1   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; seg[7] ; 14    ; --       ; 2   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; way[0] ; 33    ; --       ; 4   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; way[1] ; 31    ; --       ; 3   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; way[2] ; 29    ; --       ; 3   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; way[3] ; 28    ; --       ; 3   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; way[4] ; 27    ; --       ; 3   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; way[5] ; 26    ; --       ; 3   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; way[6] ; 25    ; --       ; 3   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
+; way[7] ; 24    ; --       ; 3   ; no              ; no             ; no         ; no            ; 3.3-V LVTTL  ; User                 ; 10 pF ; -                    ; -                   ;
 +--------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
 
 
@@ -173,44 +177,44 @@ The pin-out file can be found in C:/Users/Gary/Desktop/Vue/Verilog_CommonAnodeFo
 ; 1        ; 0          ; --       ; GND+           ;        ;              ;         ;                 ;
 ; 2        ; 1          ; --       ; GND+           ;        ;              ;         ;                 ;
 ; 3        ; 2          ; --       ; VCCINT         ; power  ;              ; 3.3V    ;                 ;
-; 4        ; 3          ; --       ; seg[7]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
-; 5        ; 4          ; --       ; way[0]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
-; 6        ; 5          ; --       ; way[1]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 4        ; 3          ; --       ; seg[6]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 5        ; 4          ; --       ; seg[5]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 6        ; 5          ; --       ; seg[4]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
 ; 7        ; 6          ; --       ; TDI            ; input  ; 3.3-V LVTTL  ;         ; N               ;
-; 8        ; 7          ; --       ; way[2]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
-; 9        ; 8          ; --       ; way[3]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 8        ; 7          ; --       ; seg[3]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 9        ; 8          ; --       ; seg[2]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
 ; 10       ; 9          ; --       ; GND            ; gnd    ;              ;         ;                 ;
-; 11       ; 10         ; --       ; showNum[5]     ; input  ; 3.3-V LVTTL  ;         ; Y               ;
-; 12       ; 11         ; --       ; showNum[4]     ; input  ; 3.3-V LVTTL  ;         ; Y               ;
+; 11       ; 10         ; --       ; seg[1]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 12       ; 11         ; --       ; seg[0]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
 ; 13       ; 12         ; --       ; TMS            ; input  ; 3.3-V LVTTL  ;         ; N               ;
-; 14       ; 13         ; --       ; showNum[3]     ; input  ; 3.3-V LVTTL  ;         ; Y               ;
+; 14       ; 13         ; --       ; seg[7]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
 ; 15       ; 14         ; --       ; VCCIO          ; power  ;              ; 3.3V    ;                 ;
-; 16       ; 15         ; --       ; showNum[2]     ; input  ; 3.3-V LVTTL  ;         ; Y               ;
+; 16       ; 15         ; --       ; showDigit[0]   ; input  ; 3.3-V LVTTL  ;         ; Y               ;
 ; 17       ; 16         ; --       ; GND            ; gnd    ;              ;         ;                 ;
-; 18       ; 17         ; --       ; showNum[1]     ; input  ; 3.3-V LVTTL  ;         ; Y               ;
-; 19       ; 18         ; --       ; showNum[0]     ; input  ; 3.3-V LVTTL  ;         ; Y               ;
-; 20       ; 19         ; --       ; RESERVED       ;        ;              ;         ;                 ;
-; 21       ; 20         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 18       ; 17         ; --       ; showDigit[1]   ; input  ; 3.3-V LVTTL  ;         ; Y               ;
+; 19       ; 18         ; --       ; showDigit[2]   ; input  ; 3.3-V LVTTL  ;         ; Y               ;
+; 20       ; 19         ; --       ; showDigit[3]   ; input  ; 3.3-V LVTTL  ;         ; Y               ;
+; 21       ; 20         ; --       ; showNum[5]     ; input  ; 3.3-V LVTTL  ;         ; Y               ;
 ; 22       ; 21         ; --       ; GND            ; gnd    ;              ;         ;                 ;
 ; 23       ; 22         ; --       ; VCCINT         ; power  ;              ; 3.3V    ;                 ;
-; 24       ; 23         ; --       ; seg[1]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
-; 25       ; 24         ; --       ; seg[5]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
-; 26       ; 25         ; --       ; seg[0]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
-; 27       ; 26         ; --       ; seg[4]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
-; 28       ; 27         ; --       ; seg[3]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
-; 29       ; 28         ; --       ; seg[6]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 24       ; 23         ; --       ; way[7]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 25       ; 24         ; --       ; way[6]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 26       ; 25         ; --       ; way[5]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 27       ; 26         ; --       ; way[4]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 28       ; 27         ; --       ; way[3]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 29       ; 28         ; --       ; way[2]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
 ; 30       ; 29         ; --       ; GND            ; gnd    ;              ;         ;                 ;
-; 31       ; 30         ; --       ; seg[2]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 31       ; 30         ; --       ; way[1]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
 ; 32       ; 31         ; --       ; TCK            ; input  ; 3.3-V LVTTL  ;         ; N               ;
-; 33       ; 32         ; --       ; RESERVED       ;        ;              ;         ;                 ;
-; 34       ; 33         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 33       ; 32         ; --       ; way[0]         ; output ; 3.3-V LVTTL  ;         ; Y               ;
+; 34       ; 33         ; --       ; showNum[4]     ; input  ; 3.3-V LVTTL  ;         ; Y               ;
 ; 35       ; 34         ; --       ; VCCIO          ; power  ;              ; 3.3V    ;                 ;
 ; 36       ; 35         ; --       ; GND            ; gnd    ;              ;         ;                 ;
-; 37       ; 36         ; --       ; showDigit[0]   ; input  ; 3.3-V LVTTL  ;         ; Y               ;
+; 37       ; 36         ; --       ; showNum[3]     ; input  ; 3.3-V LVTTL  ;         ; Y               ;
 ; 38       ; 37         ; --       ; TDO            ; output ; 3.3-V LVTTL  ;         ; N               ;
-; 39       ; 38         ; --       ; showDigit[1]   ; input  ; 3.3-V LVTTL  ;         ; Y               ;
-; 40       ; 39         ; --       ; showDigit[2]   ; input  ; 3.3-V LVTTL  ;         ; Y               ;
-; 41       ; 40         ; --       ; showDigit[3]   ; input  ; 3.3-V LVTTL  ;         ; Y               ;
+; 39       ; 38         ; --       ; showNum[2]     ; input  ; 3.3-V LVTTL  ;         ; Y               ;
+; 40       ; 39         ; --       ; showNum[1]     ; input  ; 3.3-V LVTTL  ;         ; Y               ;
+; 41       ; 40         ; --       ; showNum[0]     ; input  ; 3.3-V LVTTL  ;         ; Y               ;
 ; 42       ; 41         ; --       ; GND            ; gnd    ;              ;         ;                 ;
 ; 43       ; 42         ; --       ; clk            ; input  ; 3.3-V LVTTL  ;         ; Y               ;
 ; 44       ; 43         ; --       ; GND+           ;        ;              ;         ;                 ;
@@ -254,7 +258,7 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+------------+------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+------------+------+---------------------+--------------+
-; |tt                        ; 12         ; 27   ; |tt                 ; work         ;
+; |tt                        ; 16         ; 31   ; |tt                 ; work         ;
 +----------------------------+------------+------+---------------------+--------------+
 
 
@@ -267,24 +271,28 @@ Note: User assignments will override these defaults. The user specified values a
 ; showNum[4]   ; 8                ;
 ; showNum[3]   ; 8                ;
 ; showNum[2]   ; 8                ;
-; showNum[1]   ; 6                ;
-; showNum[0]   ; 6                ;
-; showDigit[3] ; 4                ;
-; showDigit[2] ; 4                ;
-; showDigit[1] ; 4                ;
-; showDigit[0] ; 4                ;
-; WideOr3~8    ; 1                ;
-; WideOr4~7    ; 1                ;
-; seg~17       ; 1                ;
+; showNum[1]   ; 8                ;
+; showNum[0]   ; 8                ;
+; showDigit[3] ; 8                ;
+; showDigit[2] ; 8                ;
+; showDigit[1] ; 8                ;
+; showDigit[0] ; 8                ;
+; WideOr1~7    ; 1                ;
+; WideOr3~5    ; 1                ;
+; WideOr5~7    ; 1                ;
+; WideOr6~5    ; 1                ;
+; WideOr9~7    ; 1                ;
+; WideOr2~6    ; 1                ;
+; WideOr4~5    ; 1                ;
+; WideOr10~7   ; 1                ;
+; WideOr7~20   ; 1                ;
+; seg~18       ; 1                ;
+; WideOr11~4   ; 1                ;
+; WideOr8~6    ; 1                ;
+; Decoder1~6   ; 1                ;
+; WideOr0~4    ; 1                ;
 ; seg~14       ; 1                ;
-; WideOr1~4    ; 1                ;
-; WideOr2~8    ; 1                ;
-; WideOr6~6    ; 1                ;
 ; seg~10       ; 1                ;
-; WideOr0~3    ; 1                ;
-; Decoder0~12  ; 1                ;
-; Decoder0~10  ; 1                ;
-; Decoder0~8   ; 1                ;
 +--------------+------------------+
 
 
@@ -294,23 +302,23 @@ Note: User assignments will override these defaults. The user specified values a
 ; Interconnect Resource Type ; Usage             ;
 +----------------------------+-------------------+
 ; Output enables             ; 0 / 6 ( 0 % )     ;
-; PIA buffers                ; 16 / 144 ( 11 % ) ;
+; PIA buffers                ; 20 / 144 ( 14 % ) ;
 +----------------------------+-------------------+
 
 
 +----------------------------------------------------------------------+
 ; LAB Macrocells                                                       ;
 +----------------------------------------+-----------------------------+
-; Number of Macrocells  (Average = 3.00) ; Number of LABs  (Total = 2) ;
+; Number of Macrocells  (Average = 4.00) ; Number of LABs  (Total = 4) ;
 +----------------------------------------+-----------------------------+
-; 0                                      ; 2                           ;
-; 1                                      ; 0                           ;
+; 0                                      ; 0                           ;
+; 1                                      ; 2                           ;
 ; 2                                      ; 0                           ;
 ; 3                                      ; 0                           ;
 ; 4                                      ; 0                           ;
-; 5                                      ; 1                           ;
+; 5                                      ; 0                           ;
 ; 6                                      ; 0                           ;
-; 7                                      ; 1                           ;
+; 7                                      ; 2                           ;
 +----------------------------------------+-----------------------------+
 
 
@@ -319,18 +327,22 @@ Note: User assignments will override these defaults. The user specified values a
 +-----+------------+------------------------------------------------------------------------+--------+
 ; LAB ; Logic Cell ; Input                                                                  ; Output ;
 +-----+------------+------------------------------------------------------------------------+--------+
-;  A  ; LC4        ; showDigit[0], showDigit[1], showDigit[2], showDigit[3]                 ; way[3] ;
-;  A  ; LC11       ; showDigit[0], showDigit[1], showDigit[2], showDigit[3]                 ; way[1] ;
-;  A  ; LC5        ; showDigit[0], showDigit[1], showDigit[2], showDigit[3]                 ; way[2] ;
-;  A  ; LC14       ; showDigit[1], showDigit[2], showDigit[3], showDigit[0]                 ; way[0] ;
-;  A  ; LC16       ; showNum[1], showNum[2], showNum[0], showNum[3], showNum[4], showNum[5] ; seg[7] ;
-;  C  ; LC36       ; showNum[1], showNum[3], showNum[2], showNum[4], showNum[5]             ; seg[0] ;
-;  C  ; LC33       ; showNum[0], showNum[2], showNum[3], showNum[4], showNum[5], showNum[1] ; seg[1] ;
-;  C  ; LC41       ; showNum[2], showNum[1], showNum[3], showNum[4], showNum[5], showNum[0] ; seg[6] ;
-;  C  ; LC46       ; showNum[2], showNum[3], showNum[4], showNum[5]                         ; seg[2] ;
-;  C  ; LC35       ; showNum[0], showNum[2], showNum[3], showNum[4], showNum[5]             ; seg[5] ;
-;  C  ; LC40       ; showNum[2], showNum[0], showNum[1], showNum[4], showNum[5], showNum[3] ; seg[3] ;
-;  C  ; LC37       ; showNum[3], showNum[0], showNum[1], showNum[4], showNum[5], showNum[2] ; seg[4] ;
+;  A  ; LC14       ; showNum[2], showNum[0], showNum[1], showNum[3], showNum[4], showNum[5] ; seg[5] ;
+;  A  ; LC1        ; showNum[0], showNum[1], showNum[2], showNum[3], showNum[4], showNum[5] ; seg[0] ;
+;  A  ; LC11       ; showNum[0], showNum[1], showNum[2], showNum[3], showNum[4], showNum[5] ; seg[4] ;
+;  A  ; LC3        ; showNum[0], showNum[2], showNum[3], showNum[4], showNum[5], showNum[1] ; seg[1] ;
+;  A  ; LC16       ; showNum[4], showNum[5], showNum[2], showNum[3], showNum[0], showNum[1] ; seg[6] ;
+;  A  ; LC4        ; showNum[3], showNum[0], showNum[4], showNum[5], showNum[1], showNum[2] ; seg[2] ;
+;  A  ; LC5        ; showNum[3], showNum[2], showNum[0], showNum[1], showNum[4], showNum[5] ; seg[3] ;
+;  B  ; LC30       ; showNum[0], showNum[3], showNum[1], showNum[2], showNum[4], showNum[5] ; seg[7] ;
+;  C  ; LC33       ; showDigit[1], showDigit[3], showDigit[0], showDigit[2]                 ; way[7] ;
+;  C  ; LC40       ; showDigit[2], showDigit[0], showDigit[1], showDigit[3]                 ; way[3] ;
+;  C  ; LC36       ; showDigit[2], showDigit[1], showDigit[3], showDigit[0]                 ; way[5] ;
+;  C  ; LC46       ; showDigit[0], showDigit[3], showDigit[1], showDigit[2]                 ; way[1] ;
+;  C  ; LC41       ; showDigit[0], showDigit[1], showDigit[3], showDigit[2]                 ; way[2] ;
+;  C  ; LC37       ; showDigit[1], showDigit[3], showDigit[0], showDigit[2]                 ; way[4] ;
+;  C  ; LC35       ; showDigit[1], showDigit[3], showDigit[2], showDigit[0]                 ; way[6] ;
+;  D  ; LC49       ; showDigit[0], showDigit[2], showDigit[1], showDigit[3]                 ; way[0] ;
 +-----+------------+------------------------------------------------------------------------+--------+
 
 
@@ -355,12 +367,12 @@ Note: User assignments will override these defaults. The user specified values a
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Apr 30 13:59:27 2024
+    Info: Processing started: Wed May 01 19:09:56 2024
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off tt -c tt
 Info: Selected device EPM3064ALC44-10 for design "tt"
 Info: Quartus II Fitter was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 225 megabytes
-    Info: Processing ended: Tue Apr 30 13:59:27 2024
+    Info: Peak virtual memory: 226 megabytes
+    Info: Processing ended: Wed May 01 19:09:56 2024
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

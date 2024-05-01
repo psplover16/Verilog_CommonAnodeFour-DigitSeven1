@@ -1,5 +1,5 @@
 Simulator report for tt
-Tue Apr 30 10:31:06 2024
+Wed May 01 18:31:32 2024
 Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
 
 
@@ -38,20 +38,19 @@ applicable agreement for further details.
 
 
 
-+-----------------------------------------------+
-; Simulator Summary                             ;
-+-----------------------------+-----------------+
-; Type                        ; Value           ;
-+-----------------------------+-----------------+
-; Simulation Start Time       ; 0 ps            ;
-; Simulation End Time         ; 1.0 us          ;
-; Simulation Netlist Size     ; 35 nodes        ;
-; Simulation Coverage         ;       8.57 %    ;
-; Total Number of Transitions ; 597881          ;
-; Simulation Breakpoints      ; 0               ;
-; Family                      ; MAX3000A        ;
-; Device                      ; EPM3064ALC44-10 ;
-+-----------------------------+-----------------+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 167 nodes    ;
+; Simulation Coverage         ;      69.43 % ;
+; Total Number of Transitions ; 2278         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; MAX3000A     ;
++-----------------------------+--------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -59,7 +58,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------------+------------+---------------+
 ; Option                                                                                     ; Setting    ; Default Value ;
 +--------------------------------------------------------------------------------------------+------------+---------------+
-; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Simulation mode                                                                            ; Functional ; Timing        ;
 ; Start time                                                                                 ; 0 ns       ; 0 ns          ;
 ; Simulation results format                                                                  ; CVWF       ;               ;
 ; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
@@ -77,7 +76,7 @@ applicable agreement for further details.
 ; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
 ; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
 ; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
-; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
 ; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
 +--------------------------------------------------------------------------------------------+------------+---------------+
 
@@ -94,108 +93,246 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;       8.57 % ;
-; Total nodes checked                                 ; 35           ;
-; Total output ports checked                          ; 35           ;
-; Total output ports with complete 1/0-value coverage ; 3            ;
-; Total output ports with no 1/0-value coverage       ; 32           ;
-; Total output ports with no 1-value coverage         ; 32           ;
-; Total output ports with no 0-value coverage         ; 32           ;
+; Total coverage as a percentage                      ;      69.43 % ;
+; Total nodes checked                                 ; 167          ;
+; Total output ports checked                          ; 157          ;
+; Total output ports with complete 1/0-value coverage ; 109          ;
+; Total output ports with no 1/0-value coverage       ; 48           ;
+; Total output ports with no 1-value coverage         ; 48           ;
+; Total output ports with no 0-value coverage         ; 48           ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+-------------------------------------------------------+
-; Complete 1/0-Value Coverage                           ;
-+-----------------+------------------+------------------+
-; Node Name       ; Output Port Name ; Output Port Type ;
-+-----------------+------------------+------------------+
-; |tt|way[0]~reg0 ; |tt|way[0]~reg0  ; dataout          ;
-; |tt|clk         ; |tt|clk~corein   ; dataout          ;
-; |tt|way[0]      ; |tt|way[0]       ; padio            ;
-+-----------------+------------------+------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                          ;
++-------------------------------------------------------------------------+-------------------------------------------------------------------------+------------------+
+; Node Name                                                               ; Output Port Name                                                        ; Output Port Type ;
++-------------------------------------------------------------------------+-------------------------------------------------------------------------+------------------+
+; |tt|seg[2]~reg0                                                         ; |tt|seg[2]~reg0                                                         ; regout           ;
+; |tt|seg[1]~reg0                                                         ; |tt|seg[1]~reg0                                                         ; regout           ;
+; |tt|way~0                                                               ; |tt|way~0                                                               ; out              ;
+; |tt|way~1                                                               ; |tt|way~1                                                               ; out              ;
+; |tt|way~2                                                               ; |tt|way~2                                                               ; out              ;
+; |tt|way~3                                                               ; |tt|way~3                                                               ; out              ;
+; |tt|way~4                                                               ; |tt|way~4                                                               ; out              ;
+; |tt|way~5                                                               ; |tt|way~5                                                               ; out              ;
+; |tt|way~6                                                               ; |tt|way~6                                                               ; out              ;
+; |tt|WideOr0                                                             ; |tt|WideOr0                                                             ; out0             ;
+; |tt|seg~0                                                               ; |tt|seg~0                                                               ; out0             ;
+; |tt|aaa[3]                                                              ; |tt|aaa[3]                                                              ; regout           ;
+; |tt|aaa[2]                                                              ; |tt|aaa[2]                                                              ; regout           ;
+; |tt|WideOr1                                                             ; |tt|WideOr1                                                             ; out0             ;
+; |tt|aaa[1]                                                              ; |tt|aaa[1]                                                              ; regout           ;
+; |tt|WideOr2                                                             ; |tt|WideOr2                                                             ; out0             ;
+; |tt|aaa[0]                                                              ; |tt|aaa[0]                                                              ; regout           ;
+; |tt|WideOr3                                                             ; |tt|WideOr3                                                             ; out0             ;
+; |tt|seg~1                                                               ; |tt|seg~1                                                               ; out0             ;
+; |tt|aaa~1                                                               ; |tt|aaa~1                                                               ; out              ;
+; |tt|aaa~2                                                               ; |tt|aaa~2                                                               ; out              ;
+; |tt|aaa~3                                                               ; |tt|aaa~3                                                               ; out              ;
+; |tt|aaa~4                                                               ; |tt|aaa~4                                                               ; out              ;
+; |tt|aaa~5                                                               ; |tt|aaa~5                                                               ; out              ;
+; |tt|frequency[0]                                                        ; |tt|frequency[0]                                                        ; regout           ;
+; |tt|seg[3]~reg0                                                         ; |tt|seg[3]~reg0                                                         ; regout           ;
+; |tt|seg[4]~reg0                                                         ; |tt|seg[4]~reg0                                                         ; regout           ;
+; |tt|seg[5]~reg0                                                         ; |tt|seg[5]~reg0                                                         ; regout           ;
+; |tt|seg[6]~reg0                                                         ; |tt|seg[6]~reg0                                                         ; regout           ;
+; |tt|seg[7]~reg0                                                         ; |tt|seg[7]~reg0                                                         ; regout           ;
+; |tt|way[0]~reg0                                                         ; |tt|way[0]~reg0                                                         ; regout           ;
+; |tt|way[1]~reg0                                                         ; |tt|way[1]~reg0                                                         ; regout           ;
+; |tt|way[2]~reg0                                                         ; |tt|way[2]~reg0                                                         ; regout           ;
+; |tt|way[3]~reg0                                                         ; |tt|way[3]~reg0                                                         ; regout           ;
+; |tt|way[4]~reg0                                                         ; |tt|way[4]~reg0                                                         ; regout           ;
+; |tt|way[5]~reg0                                                         ; |tt|way[5]~reg0                                                         ; regout           ;
+; |tt|way[6]~reg0                                                         ; |tt|way[6]~reg0                                                         ; regout           ;
+; |tt|way[7]~reg0                                                         ; |tt|way[7]~reg0                                                         ; regout           ;
+; |tt|frequency[1]                                                        ; |tt|frequency[1]                                                        ; regout           ;
+; |tt|clk                                                                 ; |tt|clk                                                                 ; out              ;
+; |tt|seg[1]                                                              ; |tt|seg[1]                                                              ; pin_out          ;
+; |tt|seg[2]                                                              ; |tt|seg[2]                                                              ; pin_out          ;
+; |tt|seg[3]                                                              ; |tt|seg[3]                                                              ; pin_out          ;
+; |tt|seg[4]                                                              ; |tt|seg[4]                                                              ; pin_out          ;
+; |tt|seg[5]                                                              ; |tt|seg[5]                                                              ; pin_out          ;
+; |tt|seg[6]                                                              ; |tt|seg[6]                                                              ; pin_out          ;
+; |tt|seg[7]                                                              ; |tt|seg[7]                                                              ; pin_out          ;
+; |tt|way[0]                                                              ; |tt|way[0]                                                              ; pin_out          ;
+; |tt|way[1]                                                              ; |tt|way[1]                                                              ; pin_out          ;
+; |tt|way[2]                                                              ; |tt|way[2]                                                              ; pin_out          ;
+; |tt|way[3]                                                              ; |tt|way[3]                                                              ; pin_out          ;
+; |tt|way[4]                                                              ; |tt|way[4]                                                              ; pin_out          ;
+; |tt|way[5]                                                              ; |tt|way[5]                                                              ; pin_out          ;
+; |tt|way[6]                                                              ; |tt|way[6]                                                              ; pin_out          ;
+; |tt|way[7]                                                              ; |tt|way[7]                                                              ; pin_out          ;
+; |tt|Decoder0~0                                                          ; |tt|Decoder0~0                                                          ; out0             ;
+; |tt|Decoder0~1                                                          ; |tt|Decoder0~1                                                          ; out0             ;
+; |tt|Decoder0~2                                                          ; |tt|Decoder0~2                                                          ; out0             ;
+; |tt|Decoder0~3                                                          ; |tt|Decoder0~3                                                          ; out0             ;
+; |tt|Decoder0~4                                                          ; |tt|Decoder0~4                                                          ; out0             ;
+; |tt|Decoder0~5                                                          ; |tt|Decoder0~5                                                          ; out0             ;
+; |tt|Decoder0~6                                                          ; |tt|Decoder0~6                                                          ; out0             ;
+; |tt|Decoder0~7                                                          ; |tt|Decoder0~7                                                          ; out0             ;
+; |tt|Decoder0~8                                                          ; |tt|Decoder0~8                                                          ; out0             ;
+; |tt|Decoder0~9                                                          ; |tt|Decoder0~9                                                          ; out0             ;
+; |tt|LessThan0~0                                                         ; |tt|LessThan0~0                                                         ; out0             ;
+; |tt|LessThan0~1                                                         ; |tt|LessThan0~1                                                         ; out0             ;
+; |tt|LessThan0~2                                                         ; |tt|LessThan0~2                                                         ; out0             ;
+; |tt|LessThan0~3                                                         ; |tt|LessThan0~3                                                         ; out0             ;
+; |tt|LessThan0~4                                                         ; |tt|LessThan0~4                                                         ; out0             ;
+; |tt|LessThan0~5                                                         ; |tt|LessThan0~5                                                         ; out0             ;
+; |tt|LessThan0~6                                                         ; |tt|LessThan0~6                                                         ; out0             ;
+; |tt|Equal0~0                                                            ; |tt|Equal0~0                                                            ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[0]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[0]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[1]~1             ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[1]~1             ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[1]              ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[1]              ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[2]~2             ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[2]~2             ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[2]              ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[2]              ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[3]~3             ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[3]~3             ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[3]              ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[3]              ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g3                  ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g3                  ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~0                 ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~0                 ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g4~0                ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g4~0                ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gc[0]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gc[0]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gc[1]~0             ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gc[1]~0             ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gc[1]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gc[1]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gc[2]~1             ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gc[2]~1             ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gc[2]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gc[2]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[0]     ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[0]     ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[1]     ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[1]     ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[2]     ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[2]     ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[3]     ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[3]     ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~1                 ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~1                 ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_result[0]~0   ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_result[0]~0   ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[1]~0 ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[1]~0 ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[1]   ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[1]   ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[2]~1 ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[2]~1 ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[2]   ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[2]   ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[3]   ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[3]   ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[4]   ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[4]   ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gn[0]               ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gn[0]               ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|ps[1]~1             ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|ps[1]~1             ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|psi[1]              ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|psi[1]              ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gc[0]               ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gc[0]               ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|tot_cin_node[0]     ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|tot_cin_node[0]     ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|_~1                 ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|_~1                 ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_result[0]~0   ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_result[0]~0   ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_res_node[1]~0 ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_res_node[1]~0 ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_res_node[1]   ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|unreg_res_node[1]   ; out0             ;
++-------------------------------------------------------------------------+-------------------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+---------------------------------------------------------------+
-; Missing 1-Value Coverage                                      ;
-+------------------+-------------------------+------------------+
-; Node Name        ; Output Port Name        ; Output Port Type ;
-+------------------+-------------------------+------------------+
-; |tt|way[2]~reg0  ; |tt|way[2]~reg0         ; dataout          ;
-; |tt|way[3]~reg0  ; |tt|way[3]~reg0         ; dataout          ;
-; |tt|way[1]~reg0  ; |tt|way[1]~reg0         ; dataout          ;
-; |tt|seg[7]~reg0  ; |tt|seg[7]~reg0         ; dataout          ;
-; |tt|seg[6]~reg0  ; |tt|seg[6]~reg0         ; dataout          ;
-; |tt|seg[2]~reg0  ; |tt|seg[2]~reg0         ; dataout          ;
-; |tt|seg[1]~reg0  ; |tt|seg[1]~reg0         ; dataout          ;
-; |tt|seg[0]~reg0  ; |tt|seg[0]~reg0         ; dataout          ;
-; |tt|seg[5]~reg0  ; |tt|seg[5]~reg0         ; dataout          ;
-; |tt|seg[4]~reg0  ; |tt|seg[4]~reg0         ; dataout          ;
-; |tt|seg[3]~reg0  ; |tt|seg[3]~reg0         ; dataout          ;
-; |tt|showDigit[0] ; |tt|showDigit[0]~corein ; dataout          ;
-; |tt|showDigit[1] ; |tt|showDigit[1]~corein ; dataout          ;
-; |tt|showDigit[2] ; |tt|showDigit[2]~corein ; dataout          ;
-; |tt|showDigit[3] ; |tt|showDigit[3]~corein ; dataout          ;
-; |tt|showNum[0]   ; |tt|showNum[0]~corein   ; dataout          ;
-; |tt|showNum[1]   ; |tt|showNum[1]~corein   ; dataout          ;
-; |tt|showNum[2]   ; |tt|showNum[2]~corein   ; dataout          ;
-; |tt|showNum[3]   ; |tt|showNum[3]~corein   ; dataout          ;
-; |tt|showNum[4]   ; |tt|showNum[4]~corein   ; dataout          ;
-; |tt|showNum[5]   ; |tt|showNum[5]~corein   ; dataout          ;
-; |tt|way[2]       ; |tt|way[2]              ; padio            ;
-; |tt|seg[0]       ; |tt|seg[0]              ; padio            ;
-; |tt|seg[1]       ; |tt|seg[1]              ; padio            ;
-; |tt|seg[2]       ; |tt|seg[2]              ; padio            ;
-; |tt|seg[6]       ; |tt|seg[6]              ; padio            ;
-; |tt|seg[7]       ; |tt|seg[7]              ; padio            ;
-; |tt|way[1]       ; |tt|way[1]              ; padio            ;
-; |tt|way[3]       ; |tt|way[3]              ; padio            ;
-; |tt|seg[3]       ; |tt|seg[3]              ; padio            ;
-; |tt|seg[4]       ; |tt|seg[4]              ; padio            ;
-; |tt|seg[5]       ; |tt|seg[5]              ; padio            ;
-+------------------+-------------------------+------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                             ;
++-------------------------------------------------------------------------+-------------------------------------------------------------------------+------------------+
+; Node Name                                                               ; Output Port Name                                                        ; Output Port Type ;
++-------------------------------------------------------------------------+-------------------------------------------------------------------------+------------------+
+; |tt|seg[0]~reg0                                                         ; |tt|seg[0]~reg0                                                         ; regout           ;
+; |tt|aaa[5]                                                              ; |tt|aaa[5]                                                              ; regout           ;
+; |tt|aaa[4]                                                              ; |tt|aaa[4]                                                              ; regout           ;
+; |tt|WideOr4                                                             ; |tt|WideOr4                                                             ; out0             ;
+; |tt|aaa~0                                                               ; |tt|aaa~0                                                               ; out              ;
+; |tt|seg[0]                                                              ; |tt|seg[0]                                                              ; pin_out          ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[7]~0     ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[7]~0     ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[5]       ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[5]       ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[4]       ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[4]       ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[3]       ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[3]       ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[2]       ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[2]       ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[1]       ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[1]       ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[0]       ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[0]       ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[0]~0             ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[0]~0             ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[0]              ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[0]              ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[1]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[1]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[2]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[2]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[3]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[3]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[4]~4             ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[4]~4             ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[4]              ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[4]              ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[4]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[4]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[5]~5             ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[5]~5             ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[5]              ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[5]              ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[5]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[5]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[0]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[0]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[1]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[1]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[2]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[2]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[3]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[3]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[4]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[4]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g3~0                ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g3~0                ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|p2c[0]              ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|p2c[0]              ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[4]~0   ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[4]~0   ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[4]     ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[4]     ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~2                 ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~2                 ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~3                 ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~3                 ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~4                 ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~4                 ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[4]~2 ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[4]~2 ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~5                 ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~5                 ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[5]~3 ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[5]~3 ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[5]   ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[5]   ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[7]~0     ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[7]~0     ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[1]       ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[1]       ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[0]       ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[0]       ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|ps[0]~0             ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|ps[0]~0             ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|psi[0]              ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|psi[0]              ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gn[1]               ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gn[1]               ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|pc[0]               ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|pc[0]               ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|_~2                 ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|_~2                 ; out0             ;
++-------------------------------------------------------------------------+-------------------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+---------------------------------------------------------------+
-; Missing 0-Value Coverage                                      ;
-+------------------+-------------------------+------------------+
-; Node Name        ; Output Port Name        ; Output Port Type ;
-+------------------+-------------------------+------------------+
-; |tt|way[2]~reg0  ; |tt|way[2]~reg0         ; dataout          ;
-; |tt|way[3]~reg0  ; |tt|way[3]~reg0         ; dataout          ;
-; |tt|way[1]~reg0  ; |tt|way[1]~reg0         ; dataout          ;
-; |tt|seg[7]~reg0  ; |tt|seg[7]~reg0         ; dataout          ;
-; |tt|seg[6]~reg0  ; |tt|seg[6]~reg0         ; dataout          ;
-; |tt|seg[2]~reg0  ; |tt|seg[2]~reg0         ; dataout          ;
-; |tt|seg[1]~reg0  ; |tt|seg[1]~reg0         ; dataout          ;
-; |tt|seg[0]~reg0  ; |tt|seg[0]~reg0         ; dataout          ;
-; |tt|seg[5]~reg0  ; |tt|seg[5]~reg0         ; dataout          ;
-; |tt|seg[4]~reg0  ; |tt|seg[4]~reg0         ; dataout          ;
-; |tt|seg[3]~reg0  ; |tt|seg[3]~reg0         ; dataout          ;
-; |tt|showDigit[0] ; |tt|showDigit[0]~corein ; dataout          ;
-; |tt|showDigit[1] ; |tt|showDigit[1]~corein ; dataout          ;
-; |tt|showDigit[2] ; |tt|showDigit[2]~corein ; dataout          ;
-; |tt|showDigit[3] ; |tt|showDigit[3]~corein ; dataout          ;
-; |tt|showNum[0]   ; |tt|showNum[0]~corein   ; dataout          ;
-; |tt|showNum[1]   ; |tt|showNum[1]~corein   ; dataout          ;
-; |tt|showNum[2]   ; |tt|showNum[2]~corein   ; dataout          ;
-; |tt|showNum[3]   ; |tt|showNum[3]~corein   ; dataout          ;
-; |tt|showNum[4]   ; |tt|showNum[4]~corein   ; dataout          ;
-; |tt|showNum[5]   ; |tt|showNum[5]~corein   ; dataout          ;
-; |tt|way[2]       ; |tt|way[2]              ; padio            ;
-; |tt|seg[0]       ; |tt|seg[0]              ; padio            ;
-; |tt|seg[1]       ; |tt|seg[1]              ; padio            ;
-; |tt|seg[2]       ; |tt|seg[2]              ; padio            ;
-; |tt|seg[6]       ; |tt|seg[6]              ; padio            ;
-; |tt|seg[7]       ; |tt|seg[7]              ; padio            ;
-; |tt|way[1]       ; |tt|way[1]              ; padio            ;
-; |tt|way[3]       ; |tt|way[3]              ; padio            ;
-; |tt|seg[3]       ; |tt|seg[3]              ; padio            ;
-; |tt|seg[4]       ; |tt|seg[4]              ; padio            ;
-; |tt|seg[5]       ; |tt|seg[5]              ; padio            ;
-+------------------+-------------------------+------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                             ;
++-------------------------------------------------------------------------+-------------------------------------------------------------------------+------------------+
+; Node Name                                                               ; Output Port Name                                                        ; Output Port Type ;
++-------------------------------------------------------------------------+-------------------------------------------------------------------------+------------------+
+; |tt|seg[0]~reg0                                                         ; |tt|seg[0]~reg0                                                         ; regout           ;
+; |tt|aaa[5]                                                              ; |tt|aaa[5]                                                              ; regout           ;
+; |tt|aaa[4]                                                              ; |tt|aaa[4]                                                              ; regout           ;
+; |tt|WideOr4                                                             ; |tt|WideOr4                                                             ; out0             ;
+; |tt|aaa~0                                                               ; |tt|aaa~0                                                               ; out              ;
+; |tt|seg[0]                                                              ; |tt|seg[0]                                                              ; pin_out          ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[7]~0     ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[7]~0     ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[5]       ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[5]       ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[4]       ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[4]       ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[3]       ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[3]       ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[2]       ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[2]       ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[1]       ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[1]       ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[0]       ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|datab_node[0]       ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[0]~0             ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[0]~0             ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[0]              ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[0]              ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[1]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[1]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[2]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[2]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[3]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[3]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[4]~4             ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[4]~4             ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[4]              ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[4]              ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[4]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[4]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[5]~5             ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|ps[5]~5             ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[5]              ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|psi[5]              ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[5]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|gn[5]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[0]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[0]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[1]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[1]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[2]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[2]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[3]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[3]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[4]               ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|pc[4]               ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g3~0                ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|g3~0                ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|p2c[0]              ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|p2c[0]              ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[4]~0   ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[4]~0   ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[4]     ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|tot_cin_node[4]     ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~2                 ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~2                 ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~3                 ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~3                 ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~4                 ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~4                 ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[4]~2 ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[4]~2 ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~5                 ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|_~5                 ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[5]~3 ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[5]~3 ; out0             ;
+; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[5]   ; |tt|lpm_add_sub:Add1|addcore:adder|addcore:adder[0]|unreg_res_node[5]   ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[7]~0     ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[7]~0     ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[1]       ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[1]       ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[0]       ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|datab_node[0]       ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|ps[0]~0             ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|ps[0]~0             ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|psi[0]              ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|psi[0]              ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gn[1]               ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|gn[1]               ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|pc[0]               ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|pc[0]               ; out0             ;
+; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|_~2                 ; |tt|lpm_add_sub:Add0|addcore:adder|addcore:adder[0]|_~2                 ; out0             ;
++-------------------------------------------------------------------------+-------------------------------------------------------------------------+------------------+
 
 
 +---------------------+
@@ -211,1022 +348,18 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Apr 30 10:30:59 2024
+    Info: Processing started: Wed May 01 18:31:32 2024
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off tt -c tt
-Info: Using vector source file "C:/Users/Gary/Desktop/Vue/Verilog_CommonAnodeFour-DigitSeven1/tt.vwf"
-Info: Overwriting simulation input file with simulation results
-    Info: A backup of tt.vwf called tt.sim_ori.vwf has been created in the db folder
+Info: Using vector source file "C:/Vue/Verilog_CommonAnodeFour-DigitSeven1/tt.vwf"
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
-Warning: Found clock high time violation at 3.61 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.61 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.61 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.61 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.61 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.61 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.61 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.61 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.61 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.61 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.61 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.61 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.62 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.62 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.62 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.62 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.62 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.62 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.62 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.62 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.62 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.62 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.62 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.62 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.63 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.63 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.63 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.63 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.63 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.63 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.63 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.63 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.63 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.63 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.63 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.63 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.64 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.64 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.64 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.64 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.64 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.64 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.64 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.64 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.64 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.64 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.64 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.64 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.65 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.65 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.65 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.65 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.65 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.65 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.65 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.65 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.65 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.65 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.65 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.65 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.66 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.66 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.66 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.66 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.66 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.66 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.66 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.66 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.66 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.66 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.66 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.66 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.67 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.67 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.67 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.67 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.67 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.67 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.67 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.67 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.67 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.67 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.67 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.67 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.68 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.68 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.68 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.68 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.68 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.68 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.68 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.68 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.68 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.68 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.68 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.68 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.69 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.69 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.69 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.69 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.69 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.69 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.69 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.69 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.69 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.69 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.69 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.69 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.7 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.7 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.7 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.7 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.7 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.7 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.7 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.7 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.7 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.7 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.7 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.7 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.71 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.71 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.71 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.71 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.71 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.71 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.71 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.71 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.71 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.71 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.71 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.71 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.72 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.72 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.72 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.72 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.72 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.72 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.72 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.72 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.72 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.72 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.72 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.72 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.73 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.73 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.73 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.73 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.73 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.73 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.73 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.73 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.73 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.73 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.73 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.73 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.74 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.74 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.74 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.74 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.74 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.74 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.74 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.74 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.74 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.74 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.74 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.74 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.75 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.75 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.75 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.75 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.75 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.75 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.75 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.75 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.75 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.75 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.75 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.75 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.76 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.76 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.76 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.76 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.76 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.76 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.76 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.76 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.76 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.76 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.76 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.76 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.77 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.77 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.77 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.77 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.77 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.77 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.77 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.77 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.77 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.77 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.77 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.77 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.78 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.78 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.78 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.78 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.78 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.78 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.78 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.78 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.78 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.78 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.78 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.78 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.79 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.79 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.79 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.79 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.79 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.79 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.79 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.79 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.79 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.79 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.79 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.79 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.8 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.8 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.8 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.8 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.8 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.8 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.8 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.8 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.8 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.8 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.8 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.8 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.81 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.81 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.81 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.81 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.81 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.81 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.81 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.81 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.81 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.81 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.81 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.81 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.82 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.82 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.82 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.82 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.82 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.82 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.82 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.82 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.82 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.82 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.82 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.82 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.83 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.83 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.83 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.83 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.83 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.83 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.83 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.83 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.83 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.83 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.83 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.83 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.84 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.84 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.84 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.84 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.84 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.84 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.84 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.84 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.84 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.84 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.84 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.84 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.85 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.85 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.85 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.85 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.85 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.85 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.85 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.85 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.85 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.85 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.85 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.85 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.86 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.86 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.86 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.86 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.86 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.86 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.86 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.86 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.86 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.86 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.86 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.86 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.87 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.87 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.87 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.87 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.87 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.87 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.87 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.87 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.87 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.87 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.87 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.87 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.88 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.88 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.88 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.88 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.88 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.88 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.88 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.88 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.88 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.88 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.88 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.88 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.89 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.89 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.89 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.89 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.89 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.89 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.89 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.89 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.89 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.89 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.89 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.89 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.9 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.9 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.9 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.9 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.9 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.9 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.9 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.9 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.9 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.9 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.9 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.9 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.91 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.91 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.91 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.91 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.91 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.91 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.91 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.91 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.91 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.91 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.91 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.91 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.92 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.92 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.92 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.92 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.92 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.92 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.92 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.92 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.92 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.92 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.92 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.92 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.93 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.93 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.93 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.93 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.93 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.93 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.93 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.93 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.93 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.93 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.93 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.93 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.94 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.94 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.94 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.94 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.94 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.94 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.94 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.94 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.94 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.94 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.94 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.94 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.95 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.95 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.95 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.95 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.95 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.95 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.95 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.95 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.95 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.95 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.95 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.95 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.96 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.96 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.96 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.96 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.96 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.96 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.96 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.96 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.96 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.96 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.96 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.96 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.97 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.97 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.97 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.97 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.97 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.97 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.97 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.97 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.97 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.97 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.97 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.97 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.98 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.98 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.98 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.98 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.98 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.98 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.98 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.98 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.98 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.98 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.98 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.98 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 3.99 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 3.99 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 3.99 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 3.99 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 3.99 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 3.99 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 3.99 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 3.99 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 3.99 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 3.99 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 3.99 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 3.99 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.0 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.0 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.0 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.0 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.0 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.0 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.0 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.0 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.0 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.0 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.0 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.0 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.01 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.01 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.01 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.01 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.01 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.01 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.01 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.01 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.01 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.01 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.01 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.01 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.02 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.02 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.02 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.02 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.02 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.02 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.02 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.02 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.02 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.02 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.02 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.02 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.03 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.03 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.03 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.03 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.03 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.03 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.03 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.03 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.03 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.03 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.03 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.03 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.04 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.04 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.04 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.04 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.04 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.04 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.04 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.04 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.04 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.04 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.04 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.04 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.05 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.05 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.05 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.05 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.05 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.05 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.05 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.05 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.05 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.05 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.05 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.05 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.06 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.06 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.06 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.06 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.06 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.06 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.06 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.06 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.06 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.06 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.06 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.06 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.07 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.07 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.07 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.07 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.07 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.07 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.07 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.07 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.07 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.07 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.07 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.07 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.08 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.08 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.08 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.08 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.08 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.08 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.08 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.08 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.08 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.08 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.08 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.08 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.09 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.09 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.09 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.09 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.09 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.09 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.09 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.09 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.09 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.09 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.09 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.09 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.1 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.1 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.1 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.1 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.1 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.1 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.1 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.1 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.1 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.1 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.1 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.1 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.11 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.11 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.11 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.11 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.11 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.11 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.11 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.11 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.11 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.11 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.11 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.11 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.12 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.12 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.12 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.12 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.12 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.12 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.12 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.12 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.12 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.12 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.12 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.12 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.13 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.13 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.13 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.13 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.13 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.13 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.13 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.13 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.13 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.13 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.13 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.13 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.14 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.14 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.14 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.14 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.14 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.14 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.14 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.14 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.14 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.14 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.14 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.14 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.15 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.15 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.15 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.15 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.15 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.15 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.15 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.15 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.15 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.15 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.15 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.15 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.16 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.16 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.16 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.16 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.16 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.16 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.16 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.16 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.16 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.16 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.16 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.16 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.17 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.17 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.17 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.17 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.17 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.17 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.17 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.17 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.17 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.17 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.17 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.17 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.18 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.18 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.18 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.18 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.18 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.18 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.18 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.18 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.18 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.18 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.18 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.18 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.19 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.19 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.19 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.19 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.19 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.19 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.19 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.19 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.19 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.19 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.19 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.19 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.2 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.2 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.2 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.2 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.2 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.2 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.2 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.2 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.2 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.2 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.2 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.2 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.21 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.21 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.21 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.21 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.21 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.21 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.21 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.21 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.21 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.21 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.21 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.21 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.22 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.22 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.22 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.22 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.22 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.22 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.22 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.22 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.22 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.22 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.22 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.22 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.23 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.23 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.23 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.23 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.23 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.23 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.23 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.23 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.23 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.23 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.23 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.23 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.24 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.24 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.24 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.24 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.24 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.24 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.24 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.24 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.24 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.24 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.24 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.24 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.25 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.25 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.25 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.25 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.25 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.25 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.25 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.25 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.25 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.25 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.25 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.25 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.26 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.26 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.26 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.26 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.26 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.26 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.26 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.26 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.26 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.26 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.26 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.26 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.27 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.27 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.27 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.27 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.27 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.27 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.27 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.27 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.27 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.27 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.27 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.27 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.28 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.28 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.28 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.28 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.28 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.28 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.28 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.28 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.28 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.28 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.28 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.28 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.29 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.29 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.29 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.29 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.29 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.29 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.29 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.29 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.29 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.29 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.29 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.29 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.3 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.3 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.3 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.3 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.3 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.3 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.3 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.3 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.3 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.3 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.3 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.3 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.31 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.31 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.31 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.31 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.31 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.31 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.31 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.31 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.31 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.31 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.31 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.31 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.32 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.32 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.32 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.32 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.32 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.32 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.32 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.32 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.32 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.32 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.32 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.32 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.33 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.33 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.33 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.33 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.33 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.33 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.33 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.33 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.33 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.33 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.33 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.33 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.34 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.34 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.34 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.34 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.34 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.34 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.34 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.34 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.34 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.34 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.34 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.34 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.35 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.35 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.35 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.35 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.35 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.35 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.35 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.35 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.35 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.35 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.35 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.35 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.36 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.36 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.36 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.36 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.36 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.36 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.36 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.36 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.36 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.36 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.36 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.36 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.37 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.37 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.37 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.37 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.37 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.37 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.37 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.37 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.37 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.37 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.37 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.37 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.38 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.38 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.38 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.38 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.38 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.38 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.38 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.38 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.38 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.38 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.38 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.38 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.39 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.39 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.39 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.39 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.39 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.39 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.39 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.39 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.39 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.39 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.39 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.39 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.4 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.4 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.4 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.4 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.4 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.4 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.4 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.4 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.4 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.4 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.4 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.4 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.41 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.41 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.41 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.41 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.41 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.41 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.41 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.41 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.41 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.41 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.41 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.41 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.42 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.42 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.42 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.42 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.42 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.42 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.42 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.42 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.42 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.42 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.42 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.42 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.43 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.43 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.43 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.43 ns on register "|tt|seg[7]~reg0"
-Warning: Found clock high time violation at 4.43 ns on register "|tt|seg[6]~reg0"
-Warning: Found clock high time violation at 4.43 ns on register "|tt|seg[2]~reg0"
-Warning: Found clock high time violation at 4.43 ns on register "|tt|seg[1]~reg0"
-Warning: Found clock high time violation at 4.43 ns on register "|tt|seg[0]~reg0"
-Warning: Found clock high time violation at 4.43 ns on register "|tt|way[0]~reg0"
-Warning: Found clock high time violation at 4.43 ns on register "|tt|seg[5]~reg0"
-Warning: Found clock high time violation at 4.43 ns on register "|tt|seg[4]~reg0"
-Warning: Found clock high time violation at 4.43 ns on register "|tt|seg[3]~reg0"
-Warning: Found clock high time violation at 4.44 ns on register "|tt|way[2]~reg0"
-Warning: Found clock high time violation at 4.44 ns on register "|tt|way[3]~reg0"
-Warning: Found clock high time violation at 4.44 ns on register "|tt|way[1]~reg0"
-Warning: Found clock high time violation at 4.44 ns on register "|tt|seg[7]~reg0"
-Info: Detected more than 1000 clock time violations -- stopped clock time violation reporting
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is       8.57 %
-Info: Number of transitions in simulation is 597881
-Info: Vector file tt.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
-Info: Quartus II Simulator was successful. 0 errors, 1000 warnings
-    Info: Peak virtual memory: 151 megabytes
-    Info: Processing ended: Tue Apr 30 10:31:06 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+Info: Simulation coverage is      69.43 %
+Info: Number of transitions in simulation is 2278
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 152 megabytes
+    Info: Processing ended: Wed May 01 18:31:32 2024
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
 
 
